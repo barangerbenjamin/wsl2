@@ -63,7 +63,7 @@ Once your computer has restarted, click on **Start** and type **Microsoft Store*
 The first time you open WSL - it should ask you to choose a username :warning: Your username should be **one word**, **downcased** with no **special characters** :warning:
 Example: 'lewagon'
 
-It will then ask you for a password, when you type your computer's password, :warning: it will not appear on the screen :warning: - and there will be no familiar typing indicator even though your keystrokes are being registered.  This is a security feature to mask not only your password as a whole but also its length!
+It will then ask you for a new password: when you type your password, :warning: it will not appear on the screen :warning: - and there will be no familiar typing indicator even though your keystrokes are being registered.  This is a security feature to mask not only your password as a whole but also its length!
 
 You will have to retype your password then the installation will be successful.
 
