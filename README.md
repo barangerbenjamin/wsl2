@@ -6,8 +6,8 @@ Welcome to this setup where we are going to install the tools required to make y
 
 ## Prerequisites
 
-Before we start it is important that you meet those prerequisites to make sure that everything run smoothly during this setup.
-Take your time to read through everything and don't hesitate to ask for help if you feel stuck.
+Before we start it is important to note that you meet the following prerequisites to ensure that everything run smoothly during the setup.
+Take your time to read through everything and do not hesitate to ask for help if you feel stuck.
 Ready? Let's go :sunglasses:
 
 
