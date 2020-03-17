@@ -8,7 +8,7 @@ Welcome to this setup where we are going to install the tools required to make y
 
 Before we start it is important that you meet those prerequisites to make sure that everything run smoothly during this setup.
 Take your time to read through everything and don't hesitate to ask for help if you feel stuck.
-Ready? Let's go :sunglasses: 
+Ready? Let's go :sunglasses:
 
 
 
@@ -16,7 +16,7 @@ Ready? Let's go :sunglasses:
 
 For this setup, you need to run the latest version of Windows.
 
-This means that you need to run Windows 10 with all the latest update installed.
+This means that you need to run Windows 10 with all the latest updates installed.
 
 You can check that it is the case by clicking on **Start>Settings>System>About**, locate where it says *edition*. If you see something that starts with "Windows 10..." you're good to go :muscle:.
 
@@ -52,11 +52,11 @@ After the computer restarted, go to **Start>Settings>System>About**, this time l
 WSL is the development environment you are going to use, you can learn more about WSL [here](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 Click on **Start** and type **powershell**. Right click on **Windows Powershell (x86)** then click on **Run as administrator**. A blue box will appear, copy paste the following command in it:
-```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux``` 
+```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux```
 
 Press **enter** to run the command. You will be prompted to restart your computer, type **y** and **enter** to agree.
 
-When your computer has restarted, click on **Start** and type **Microsoft Store**. Launch it. In the search bar, type **Ubuntu**. Click on the first result **Ubuntu**, not **Ubuntu 18.04 LTS**. Click on **Install**. 
+When your computer has restarted, click on **Start** and type **Microsoft Store**. Launch it. In the search bar, type **Ubuntu**. Click on the first result **Ubuntu**, not **Ubuntu 18.04 LTS**. Click on **Install**.
 
 :warning: There is no progress bar for this installation, when it is done you will be prompted on the bottom right corner to launch it.
 
@@ -66,7 +66,7 @@ It will then prompt you for a password, when you type it will not appear on the 
 
 You will have to retype your password and the installation will be successful.
 
-You can close the terminal, WSL is now installed on your machine. 
+You can close the terminal, WSL is now installed on your machine.
 
 
 
