@@ -90,4 +90,3 @@ Let's upgrade it to the version 2, by running the following command
 ```wsl --set-version Ubuntu 2```
 
 A message will appear telling you that the conversion is in progress and that it will take a few minutes.
-Done!
