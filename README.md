@@ -34,9 +34,9 @@ This also applies to Windows, so we are going to sign up to their beta program, 
 
 Go to **Start>Settings>Updates & Security>Insider Program**
 
-Click on **Get Started**. It will ask you to **Link an account**; follow the instructions on screen. You will be prompted (code-speak for being asked) to choose your insider parameters, choose the recommended setting, the **Slow** one :snail:. Then confirm and restart your computer when you are prompted to do so.
+Click on **Get Started**. It will ask you to **Link an account**; follow the instructions on screen. You will be prompted (code-speak for being asked) to choose your insider parameters, choose the second setting, the **fast** one :zap:. Then confirm and restart your computer when you are prompted to do so.
 
-After your computer has restarted you can double-check that you are now part of the insider program by clicking on **Start>Settings>Updates & Security>Insider Program**, you should then be prompted with the insider parameter that you chose earlier (**slow**).
+After your computer has restarted you can double-check that you are now part of the insider program by clicking on **Start>Settings>Updates & Security>Insider Program**, you should then be prompted with the insider parameter that you chose earlier (**fast**).
 
 By joining the insider program you have unlocked more content and updates - which we also want to install. Go to **Start>Settings>Updates & Security>Windows Update**, you should see new updates available.
 :warning: These updates can be very long (more than 30 minutes) so make sure your computer has battery and that you won't have to close it during the installation :warning:
@@ -54,7 +54,17 @@ WSL is the development environment you are going to use, you can learn more abou
 Click on **Start** and type **powershell**. Right click on **Windows Powershell (x86)** then click on **Run as administrator**. A blue box will appear, copy and paste the following command into that blue box:
 ```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux```
 
-Press **enter** to run the command. You will be prompted to restart your computer, type **y** and **enter** to agree.
+Press **enter** to run the command. You will be prompted to restart your computer, type **n** and **enter** to prevent your computer to restart.
+
+Run the following command:
+
+```dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart ```
+
+Then this one:
+
+```dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart```
+
+You can now restart your computer.
 
 Once your computer has restarted, click on **Start** and type **Microsoft Store**. Launch it. In the search bar, type **Ubuntu**. Click on the first result **Ubuntu**, not **Ubuntu 18.04 LTS**. Click on **Install**.
 
@@ -77,6 +87,14 @@ By default WSL is in its first version, **1**.
 Let's upgrade it to its **version 2**.
 For this, we need to update its kernel, follow this [link](https://aka.ms/wsl2kernel). Click on the suggested link to download the update package. Once it has downloaded, open the program. Click on **next** then **finish**.
 
+We also need to make sur the its files are not compressed. Let's enable an option to let you see hidden files/folders :female_detective:. Click on **Start**; in the search bar type *folder* open the folder options. Click in the second tab **View** then under *Hidden files and folders* select **Show hidden files, folders, and drives**, click on **Apply** then **Ok** to close this window.
+
+Open a file explorer, in the sidebar click on *This computer* >*Windows (C:)* > *Users* > *your username account* > *AppData* > *Local* > *Packages*. Here you need to locate the folder starting with **CanonicalGroupLimited.UbuntuonWindows** and open it.
+
+Locate the **LocalState** folder and **right click** on it > **Properties** > **Advanced**
+
+Make sure than the option **Compress content** is not checked. Click on **ok** to validate your choice. You will be prompted to know if you want to apply only to this folder or also the subfolders. Please choose only this folder. 
+
 Click on **Start**, in the search bar type *cmd*, open the **Command Prompt**
 You will see all the WSL updates installed on your machine with the command
 
@@ -90,3 +108,7 @@ Let's upgrade it to the version 2, by running the following command
 ```wsl --set-version Ubuntu 2```
 
 A message will appear telling you that the conversion is in progress and that it will take a few minutes.
+
+When you get the message *The conversion is complete*, paste the following command in the command prompt:
+
+```wsl -l -v``` and double-check that the version is now the version 2.
